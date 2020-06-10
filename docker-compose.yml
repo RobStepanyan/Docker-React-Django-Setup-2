@@ -7,7 +7,7 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-  backnfront:
+  backend:
     build: ./setup2
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
@@ -16,3 +16,8 @@ services:
       - "8000:8000"
     depends_on:
       - db
+  frontend:
+    build: ./setup2/frontend
+    command: npm run dev
+    volumes:
+      - ./setup2:/code
