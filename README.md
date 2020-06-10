@@ -6,7 +6,7 @@ docker-compose up --build
 ```
 
 ## How it Works
-Django will run on localhost:8000 as a standalone API <br>
+Django will run on localhost:8000<br>
 React will run inside Django as an app and generate js files everytime change is made.
 
 ### Also Check Out the FIRST Setup
